@@ -1,0 +1,17 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "model": "deepseek/deepseek-v4-flash",
+    "plugin": [
+        "@franlol/opencode-md-table-formatter@latest",
+        "@mohak34/opencode-notifier@latest",
+        "~/.config/opencode/node_modules/superpowers"
+    ],
+    "mcp": {
+        "playwright": {
+            "type": "local",
+            "command": ["npx", "@playwright/mcp@latest"],
+            "enabled": true
+        }
+    },
+    "lsp": true
+}
