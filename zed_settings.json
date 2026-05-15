@@ -7,103 +7,114 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "show_edit_predictions": true,
-  "telemetry": {
-    "metrics": false,
-    "diagnostics": false
-  },
-  "ui_font_size": 16,
-  "buffer_font_family": "JetBrains Mono",
-  "buffer_font_size": 16,
-  "buffer_font_features": {
-    "calt": true
-  },
-  "autosave": "on_focus_change",
-  "auto_update": true,
-  "format_on_save": "on",
-  "inlay_hints": {
-    "enabled": true,
-    "show_type_hints": true,
-    "show_parameter_hints": true,
-    "show_other_hints": true
-  },
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
-  },
-  "lsp": {
-    "jdtls": {
-      "initialization_options": {
-        "bundles": [],
-        "settings": {
-          "java": {
-            "configuration": {
-              "updateBuildConfiguration": "interactive",
-              "maven": {
-                "userSettings": null
-              }
+    "cli_default_open_behavior": "existing_window",
+    "project_panel": {
+        "dock": "right",
+    },
+    "outline_panel": {
+        "dock": "right",
+    },
+    "collaboration_panel": {
+        "dock": "right",
+    },
+    "git_panel": {
+        "dock": "right",
+        "tree_view": true,
+    },
+    "language_models": {
+        "openai_compatible": {},
+    },
+    "ssh_connections": [],
+    "agent_servers": {
+        "codex-acp": {
+            "type": "custom",
+            "command": "C:\\Users\\34898\\AppData\\Roaming\\npm\\node_modules\\@zed-industries\\codex-acp\\node_modules\\@zed-industries\\codex-acp-win32-x64\\bin\\codex-acp.exe",
+        },
+        "claude-acp": {
+            "type": "registry",
+            "env": {
+                "CLAUDE_CODE_EXECUTABLE": "C:\\Users\\34898\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe",
             },
-            "trace": {
-              "server": "verbose"
+        },
+        "OpenCode": {
+            "type": "custom",
+            "command": "opencode",
+            "args": ["acp"],
+        },
+    },
+    "buffer_font_family": "JetBrains Mono",
+    "buffer_font_features": {
+        "ss01": true,
+    },
+    "agent": {
+        "dock": "left",
+        "default_profile": "write",
+        "default_model": {
+            "enable_thinking": true,
+            "provider": "ollama",
+            "model": "gemma4:e2b",
+        },
+        "model_parameters": [],
+    },
+    "edit_predictions": {
+        "provider": "zed",
+        "disabled_globs": [],
+    },
+    "inlay_hints": {
+        "enabled": true,
+    },
+    "auto_update": true,
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
+    },
+    "vim_mode": true,
+    "base_keymap": "VSCode",
+    "minimap": {
+        "show": "never",
+    },
+    "tab_size": 4,
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 1000,
+        },
+    },
+    "file_types": {},
+    "use_on_type_format": true,
+    "show_edit_predictions": true,
+    "ui_font_size": 16,
+    "buffer_font_size": 17.0,
+    "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "One Dark",
+    },
+    "languages": {
+        "Java": {
+            "inlay_hints": {
+                "enabled": true,
             },
-            "import": {
-              "gradle": {
-                "enabled": true
-              },
-              "maven": {
-                "enabled": true
-              },
-              "exclusions": [
-                "**/node_modules/**",
-                "**/.metadata/**",
-                "**/archetype-resources/**",
-                "**/META-INF/maven/**",
-                "/**/test/**"
-              ]
+            "completions": {
+                "words_min_length": 1,
             },
-            "jdt": {
-              "ls": {
-                "lombokSupport": {
-                  "enabled": true // Set this to true to enable lombok support
-                }
-              }
+        },
+        "JavaScript": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
             },
-            "referencesCodeLens": {
-              "enabled": false
+            "formatter": [],
+        },
+        "TypeScript": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
             },
-            "signatureHelp": {
-              "enabled": false
+            "formatter": [],
+        },
+        "Vue.js": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
             },
-            "implementationsCodeLens": {
-              "enabled": true
-            },
-            "format": {
-              "enabled": true
-            },
-            "saveActions": {
-              "organizeImports": false
-            },
-            "contentProvider": {
-              "preferred": null
-            },
-            "autobuild": {
-              "enabled": false
-            },
-            "completion": {
-              "favoriteStaticMembers": [
-                "org.junit.Assert.*",
-                "org.junit.Assume.*",
-                "org.junit.jupiter.api.Assertions.*",
-                "org.junit.jupiter.api.Assumptions.*",
-                "org.junit.jupiter.api.DynamicContainer.*",
-                "org.junit.jupiter.api.DynamicTest.*"
-              ],
-              "importOrder": ["java", "javax", "com", "org"]
-            }
-          }
-        }
-      }
-    }
-  }
+            "formatter": [],
+        },
+    },
 }
