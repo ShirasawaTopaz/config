@@ -1,0 +1,32 @@
+[
+  // jk → Esc in insert mode
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore"
+    }
+  },
+  // Normal mode custom bindings
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "q": ["workspace::SendKeystrokes", ": q enter"],
+      "w": ["workspace::SendKeystrokes", ": w enter"],
+      // Window navigation via s + h/j/k/l
+      "s h": "workspace::ActivatePaneLeft",
+      "s j": "workspace::ActivatePaneDown",
+      "s k": "workspace::ActivatePaneUp",
+      "s l": "workspace::ActivatePaneRight",
+      // Split commands
+      "s v": ["workspace::SendKeystrokes", ": vs enter"],
+      "s p": ["workspace::SendKeystrokes", ": sp enter"],
+      // Terminal
+      "t e": ["workspace::SendKeystrokes", ": term enter"],
+      // Tab management
+      "t n": ["workspace::SendKeystrokes", ": tabnew enter"],
+      "t l": ["workspace::SendKeystrokes", ": tabnext enter"],
+      "t h": ["workspace::SendKeystrokes", ": tabprev enter"],
+      "t c": ["workspace::SendKeystrokes", ": tabclose enter"]
+    }
+  }
+]
