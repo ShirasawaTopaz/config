@@ -4,7 +4,8 @@
     "plugin": [
         "@franlol/opencode-md-table-formatter@latest",
         "@mohak34/opencode-notifier@latest",
-        "~/.config/opencode/node_modules/superpowers"
+        "~/.config/opencode/node_modules/superpowers",
+        "@tarquinen/opencode-dcp@latest"
     ],
     "mcp": {
         "playwright": {
